@@ -1,0 +1,56 @@
+/* Modern Material Design-inspired styles for EmbedBot GUI */
+
+.root {
+    -fx-font-family: "Segoe UI", "San Francisco", "Helvetica Neue", Arial, sans-serif;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-opacity: 0.8;
+    -fx-translate-y: 1px;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #89b4fa;
+    -fx-border-width: 2px;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: #1e1e2e;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #45475a;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #585b70;
+}
+
+.separator .line {
+    -fx-border-color: #313244;
+    -fx-border-width: 1px;
+}
+
+.alert {
+    -fx-background-color: #1e1e2e;
+}
+
+.alert .header-panel {
+    -fx-background-color: #313244;
+}
+
+.alert .content {
+    -fx-background-color: #1e1e2e;
+    -fx-text-fill: #cdd6f4;
+}
