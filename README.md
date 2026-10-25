@@ -1,3 +1,7 @@
+## TooterWorks plugin directory
+
+Use `/directory browse` for a private Components V2 plugin browser. Administrators can publish, update, and reload a persistent catalog, starting with ModularPacks. See [DIRECTORY.md](DIRECTORY.md) for setup, metadata, commands, and validation.
+
 # EmbedBot - Professional Discord Embed Creator
 
 <div align="center">

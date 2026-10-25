@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "id": "modularpacks",
+      "name": "ModularPacks",
+      "summary": "Configurable backpacks for your Minecraft server",
+      "description": "Expand your inventory with ModularPacks. Explore the project for setup instructions, available features, and release downloads.\n\nNeed help? Visit the ModularPacks support forum in TooterWorks.",
+      "compatibility": "See the current release documentation for supported Paper and Java versions.",
+      "links": [
+        { "label": "Downloads", "url": "https://github.com/TooterTutor/ModularPacks/releases" },
+        { "label": "Documentation", "url": "https://github.com/TooterTutor/ModularPacks#readme" },
+        { "label": "Source", "url": "https://github.com/TooterTutor/ModularPacks" },
+        { "label": "Report an issue", "url": "https://github.com/TooterTutor/ModularPacks/issues" }
+      ]
+    }
+  ]
+}

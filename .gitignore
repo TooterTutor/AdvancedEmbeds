@@ -1,0 +1,5 @@
+/target/
+/dependency-reduced-pom.xml
+/.env
+/plugin-directory.json
+/embedbot-config.properties

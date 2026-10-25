@@ -45,7 +45,7 @@ public final class Bot extends ListenerAdapter {
                 .setActivity(Activity.playing("/embed to build"));
 
         // Wire up controllers
-        builder.addEventListeners(new EmbedController());
+        builder.addEventListeners(new EmbedController(), new io.github.tootertutor.embedbot.directory.DirectoryController());
 
         jda = builder.build();
         registerSlashCommands();
@@ -91,19 +91,20 @@ public final class Bot extends ListenerAdapter {
         String guildId = System.getenv(ENV_GUILD_ID);
 
         var embedCommand = EmbedController.slashCommandDefinition();
+        var directoryCommand = io.github.tootertutor.embedbot.directory.DirectoryController.command();
 
         if (guildId != null && !guildId.isBlank()) {
             var guild = jda.awaitReady().getGuildById(guildId);
             if (guild == null) {
                 log.warn("GUILD_ID {} not found, falling back to global commands", guildId);
-                jda.updateCommands().addCommands(embedCommand).queue();
+                jda.updateCommands().addCommands(embedCommand, directoryCommand).queue();
                 return;
             }
             log.info("Registering guild commands for {} (fast updates)", guild.getName());
-            guild.updateCommands().addCommands(embedCommand).complete();
+            guild.updateCommands().addCommands(embedCommand, directoryCommand).complete();
         } else {
             log.info("Registering global commands (may take up to an hour to propagate)");
-            jda.updateCommands().addCommands(embedCommand).queue();
+            jda.updateCommands().addCommands(embedCommand, directoryCommand).queue();
         }
     }
 }
